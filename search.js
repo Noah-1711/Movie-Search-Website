@@ -37,7 +37,7 @@ async function  findmovie(selectvalue){
     cards.innerHTML=""
     let inputvalue=input.value
     console.log(inputvalue)
-    const res= await fetch(`http://api.themoviedb.org/3/search/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=${inputvalue}`)
+    const res= await fetch(`https://api.themoviedb.org/3/search/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=${inputvalue}`)
     console.log(res)
 
     const data= await res.json()
@@ -74,7 +74,7 @@ async function  findtv(selectvalue){
     cards.innerHTML=""
     let inputvalue=input.value
     console.log(inputvalue)
-    const res= await fetch(`http://api.themoviedb.org/3/search/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=${inputvalue}`)
+    const res= await fetch(`https://api.themoviedb.org/3/search/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query=${inputvalue}`)
     console.log(res)
 
     const data= await res.json()
