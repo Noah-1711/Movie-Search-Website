@@ -23,12 +23,12 @@
         </div>
         <div class="inputcontainer">
             <div class="searchinput">
-                <select>
-                    <option>Movie</option>
-                    <option>Series</option>
+                <select id="searchselect">
+                    <option id="movie" value="movie">Movie</option>
+                    <option id="tv" value="tv">Series</option>
                 </select>
                 <input type="text"  id="inputsearch">
-                <button onclick="findmovie()">search</button>
+                <button onclick="movies()">search</button>
             </div>
            
             <hr />
