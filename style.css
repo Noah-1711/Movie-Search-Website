@@ -6,11 +6,11 @@
 }
 
 body{
-    width: 99vw;
+    width: 100vw;
     background-image: linear-gradient(90deg,#1e1e32,#38496e 75%);
     color: white;
     overflow-x: hidden;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
 }
 .maincontainer{
     width: 100%;
@@ -30,6 +30,12 @@ body{
     align-items: center;
 
 }
+.navbar a{
+    border: 2px red solid;
+    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
 
 .pages{
     width:15%;
@@ -40,7 +46,10 @@ body{
 }
 .pages a{
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: rgb(146, 151, 175);
+}
+.pages a:hover{
     color: white;
 }
 
@@ -50,6 +59,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    border: 2px red solid;
 }
 
 .inputcontainer{
@@ -59,6 +69,9 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border: 2px red solid;
+
+
 }
 .searchinput{
     margin-top: 2rem;
@@ -67,34 +80,44 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px red solid;
+
+
 }
 .inputcontainer select{
     width: 8%;
     height: 75%;
+    font-size: 1.1rem;
+    outline: none;
 }
 .inputcontainer input{
-    width: 55%;
+    width: 50%;
     height: 75%;
+    font-size: 1.1rem;
+    outline: none;
+
 }
 .inputcontainer button{
-    width: 5%;
+    width: 4%;
     height: 75%;
 }
 .searchbuttons{
 width: 35%;
 height: 30%;
 display: flex;
-justify-content: space-between;
+justify-content: space-around;
 align-items: center;
 margin: 1rem;
+border: 2px red solid;
+
 
 }
 .searchbuttons label{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 .searchbuttons select{
-    width: 35%;
-    height: 80%;
+    width: 30%;
+    height: 78%;
     font-size: 1.1rem;
 }
 
@@ -156,6 +179,7 @@ hr{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -169,7 +193,10 @@ hr{
     align-items: center;
     flex-wrap: wrap;
 }
-
+.cards a{
+    text-decoration: none;
+    color: white;
+}
 .poster{
     width: 160px;
     height: 320px;
@@ -201,7 +228,15 @@ hr{
 
 }
 .imgcontent h3{
+    font-size: 15px;
+}
+.imgcontent small{
+    font-size: 10px;
+    color: rgb(146, 151, 175)
+}
+.imgcontent p{
     font-size: 13px;
+    color: rgb(146, 151, 175)
 }
 
 .votes{
@@ -212,10 +247,193 @@ hr{
  top:-15px;
  right: -15px;
  border-radius: 50%;
- background-color: black;
- opacity: 0.7;
+ background-color: rgba(0,0,0, 0.8); 
  display: flex;
  justify-content: center;
  align-items: center;
+ font-size: 12px;
 
+}
+
+
+.imagecontainer{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+
+   
+
+}
+
+.imagesdetails{
+    width: 50%;
+    height: 50%;
+    margin-left: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    background-color: rgba(0,0,0, 0.4); 
+    border: 2px red solid;
+
+
+
+
+
+
+}
+
+.imagesdetails img{
+    width: 200px;
+    height: 250px;
+    border: 3px green solid;
+
+
+}
+
+.cardsdetails{
+    width:60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px green solid;
+
+
+}
+.percent{
+    width: 50px;
+    height: 50px;
+    border: 3px green solid;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.relase{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px green solid;
+
+}
+.title{
+    width: 70%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px green solid;
+
+}
+
+
+.castcontanier{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.plot{
+    width: 55%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.plot hr{
+    margin-top: 1rem ;
+    margin-bottom: 1rem ;
+}
+.cast{
+    width: 30%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+.cast hr{
+    margin-top: 1rem ;
+    margin-bottom: 1rem ;
+}
+
+@media only screen and (max-width:480px){
+    .navbar a{
+        font-size: .9rem;
+    }
+    .pages{
+        flex-direction: column;
+        width: 30%;
+    }
+    .pages a{
+        font-size: 1rem;
+    }
+    .searchcontainer{
+        justify-content: center;
+
+    }
+    .searchbuttons{
+        width: 90%;
+        
+    
+    }
+
+    .inputcontainer select{
+        width: 20%;
+        height: 70%;
+    }
+    .inputcontainer input{
+        width: 55%;
+        height: 70%;
+    }
+    .inputcontainer button{
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails{
+        margin: 0;
+        width: 100%;
+
+    }
+    .cardsdetails{
+        width: 50%;
+        height: 70%;
+    }
+    .relase{
+        width: 60%;
+        height: 30%;
+       
+    
+    }
+    .title{
+        width: 80%;
+        height: 25%;
+        
+       
+    }
+    .title h2{
+      font-size: 1.3rem;
+        
+       
+    }
+    
+    
+    .castcontanier{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
 }

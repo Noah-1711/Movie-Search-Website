@@ -1,16 +1,10 @@
 const selectinput= document.getElementById("selectinput")
 let selectvalue =selectinput.value
 const movies= document.getElementById("movies")
-console.log(movies)
 const series= document.getElementById("series")
-console.log(movies)
 
 const cards= document.getElementById("cards")
 
-// selectinput.addEventListener('change',(ele)=>{
-//     selectvalue= ele.target.value
-//        moviesearch()
-//    })
 radioone()
 
  function hello(){
@@ -47,6 +41,44 @@ radioone()
     seriessearch(selectvalue)
  }
 
+//  var Moviesgenre=[]
+// fetchmoviegenre()
+// async function fetchmoviegenre()
+// {
+
+//     const res=await fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=3fd2be6f0c70a2a598f084ddfb75487c")
+//     console.log(res)
+//     const data=await res.json()
+//     console.log(data)
+//     data.genres.map((ele)=>
+//     {
+        
+//         //console.log(ele)  
+//         Moviesgenre[ele.id]=ele.name
+
+//     })
+
+// }
+// console.log(Moviesgenre)
+
+
+// var Seriesgenre=[]
+// fetchtvgenre()
+// async function fetchtvgenre()
+// {
+//     const res=await fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=3fd2be6f0c70a2a598f084ddfb75487c")
+//     const data=await res.json()
+   
+//     data.genres.map((ele)=>
+//     {
+        
+//         //console.log(ele)  
+//         Seriesgenre[ele.id]=ele.name
+
+//     })
+    
+// }
+
 
  async function moviesearch(selectvalue){
     console.log("day")
@@ -56,18 +88,18 @@ radioone()
      const data = await res.json()
      console.log(data)
      console.log(data.results);
+   
      
      data.results.map((ele)=>{
-        const date=ele.first_air_date
-       console.log(date)
         cards.innerHTML +=` 
+        <a onclick="moviedeatils(${ele.id})" href="./cards.html">
         <div class="poster">
         <img src="https://image.tmdb.org/t/p/w154${ele.poster_path}" />
 
         <div class="imgcontent">
         <h3>${ele.title}</h3>
         <small>Drama | action</small>
-        <small>${ele.release_date }</small>
+        <p>${ele.release_date.slice(0,4) }</p>
 
 
         </div>
@@ -76,7 +108,8 @@ radioone()
         </div>
 
         
-    </div>`
+    </div>
+    </a>`
     
 
        
@@ -97,16 +130,15 @@ async function seriessearch(selectvalue){
      console.log(data.results);
      
      data.results.map((ele)=>{
-    //     const date=ele.first_air_date
-    //    console.log(date)
         cards.innerHTML +=` 
+        <a onclick="seriesdetails(${ele.id})" href="./cards.html">
         <div class="poster">
         <img src="https://image.tmdb.org/t/p/w154${ele.poster_path}" />
 
         <div class="imgcontent">
         <h3>${ele.original_name   }</h3>
         <small>Drama | action</small>
-        <small>${ele.first_air_date }</small>
+        <p>${ele.first_air_date.slice(0,4)}</p>
 
 
         </div>
@@ -115,7 +147,8 @@ async function seriessearch(selectvalue){
         </div>
 
         
-    </div>`
+    </div>
+    </a>`
     
 
        
@@ -125,5 +158,19 @@ async function seriessearch(selectvalue){
 
 
 }
+
+function moviedeatils(id){
+    console.log("moviesdeatils")
+    localStorage.setItem('movieid',id)
+
+   
+}
+
+function seriesdetails(id){
+ console.log("series details")
+ localStorage.setItem('seriesid',id)
+
+}
+
 
 

@@ -6,6 +6,7 @@ let selectvalue = searchselect.value
 const moviedropdown= document.getElementById("movie")
 const seriesdropdown= document.getElementById("tv")
 
+
 searchselect.addEventListener('change',(ele)=>{
     selectvalue= searchselect.value
     console.log(selectvalue) 
@@ -31,6 +32,8 @@ function movies(){
 
 }
 
+movies()
+
 
 async function  findmovie(selectvalue){
     console.log( "func",selectvalue) 
@@ -49,8 +52,8 @@ async function  findmovie(selectvalue){
 
         <div class="imgcontent">
         <h3>${ele.title}</h3>
-        <small>${ele.genre_ids[0]}</small>
-        <small>${ele.release_date }</small>
+        <small>drama</small>
+        <p>${ele.release_date.slice(0,4) }</p>
 
 
         </div>
@@ -85,9 +88,9 @@ async function  findtv(selectvalue){
         <img src="https://image.tmdb.org/t/p/w154${ele.poster_path}" />
 
         <div class="imgcontent">
-        <h3>${ele.name}</h3>
-        <small>${ele.genre_ids[0]}</small>
-        <small>${ele.first_air_date }</small>
+        <h2>${ele.name}</h2>
+        <small>Drama | Action</small>
+        <p>${ele.first_air_date.slice(0,4)}</p>
 
 
         </div>
