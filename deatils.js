@@ -64,7 +64,9 @@ castdata.cast.map((castname,index)=>{
     // console.log(index)
     // console.log(castname.name)
     if(index<=3){
-        cast.innerHTML +=` <p>${castname.name} </p>`
+        cast.innerHTML +=` <div class="castdetails">
+        <img src="	https://image.tmdb.org/t/p/w45${castname.profile_path}" >
+        <p>${castname.name}</p> </div>`
     }
     
 
@@ -146,7 +148,9 @@ castdata.cast.map((castname,index)=>{
     // console.log(index)
     // console.log(castname.name)
     if(index<=3){
-        cast.innerHTML +=` <p>${castname.name} </p>`
+        cast.innerHTML +=` <div class="castdetails">
+        <img src="	https://image.tmdb.org/t/p/w45${castname.profile_path}" >
+        <p>${castname.name}</p> </div>`
     }
     
 
