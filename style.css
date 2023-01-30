@@ -31,9 +31,13 @@ body {
     align-items: center;
 
 }
-
 .navbar a {
-    font-size: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a  h2{
+    font-size: 1.3rem;
     text-decoration: none;
     color: white;
 }
@@ -398,8 +402,8 @@ hr {
 }
 
 @media only screen and (max-width:480px) {
-    .navbar a {
-        font-size: .9rem;
+    .navbar a h2{
+        font-size: 1.1rem;
     }
 
     .pages {
