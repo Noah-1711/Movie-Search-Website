@@ -10,7 +10,7 @@ body{
     background-image: linear-gradient(90deg,#1e1e32,#38496e 75%);
     color: white;
     overflow-x: hidden;
-    /* font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 .maincontainer{
     width: 100%;
@@ -31,7 +31,6 @@ body{
 
 }
 .navbar a{
-    border: 2px red solid;
     font-size: 1rem;
     text-decoration: none;
     color: white;
@@ -48,6 +47,7 @@ body{
     text-decoration: none;
     font-size: 1rem;
     color: rgb(146, 151, 175);
+    font-weight: 600;
 }
 .pages a:hover{
     color: white;
@@ -59,7 +59,6 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    border: 2px red solid;
 }
 
 .inputcontainer{
@@ -69,7 +68,6 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border: 2px red solid;
 
 
 }
@@ -80,7 +78,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px red solid;
 
 
 }
@@ -108,7 +105,6 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 margin: 1rem;
-border: 2px red solid;
 
 
 }
@@ -117,12 +113,11 @@ border: 2px red solid;
 }
 .searchbuttons select{
     width: 30%;
-    height: 78%;
+    height: 75%;
     font-size: 1.1rem;
 }
 
 /* .buttons{
-border: 2px red solid;
 width: 40%;
 height: 90%;
 display: flex;
@@ -136,7 +131,7 @@ align-items: center;
     align-items: center;
     background-color: #3d435d;
     width: 40%;
-    height: 90%;
+    height: 80%;
     border-radius: 5px;
     box-shadow: inset 0.5px 0.5px 2px 0 rgba(0, 0, 0, 0.15);
     border: 2px gray solid;
@@ -262,6 +257,7 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    background-size: 100% 100%;
 
 
    
@@ -276,7 +272,6 @@ hr{
     justify-content: space-evenly;
     margin-bottom: 1rem;
     background-color: rgba(0,0,0, 0.4); 
-    border: 2px red solid;
 
 
 
@@ -288,7 +283,6 @@ hr{
 .imagesdetails img{
     width: 200px;
     height: 250px;
-    border: 3px green solid;
 
 
 }
@@ -299,7 +293,6 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 3px green solid;
 
 
 }
@@ -308,8 +301,7 @@ hr{
     height: 50px;
     border: 3px green solid;
     border-radius: 50%;
-    background-color: black;
-    opacity: 0.7;
+    background-color: rgba(0,0,0, 0.8); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,7 +313,6 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 3px green solid;
 
 }
 .title{
@@ -330,7 +321,6 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 3px green solid;
 
 }
 
@@ -384,6 +374,143 @@ hr{
     }
     .searchbuttons{
         width: 90%;
+        
+    
+    }
+
+    .inputcontainer select{
+        width: 20%;
+        height: 70%;
+    }
+    .inputcontainer input{
+        width: 55%;
+        height: 70%;
+    }
+    .inputcontainer button{
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails{
+        margin: 0;
+        width: 100%;
+
+    }
+    .cardsdetails{
+        width: 50%;
+        height: 70%;
+    }
+    .relase{
+        width: 60%;
+        height: 30%;
+       
+    
+    }
+    .title{
+        width: 80%;
+        height: 25%;
+        
+       
+    }
+    .title h2{
+      font-size: 1.3rem;
+        
+       
+    }
+    
+    
+    .castcontanier{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:481px) and (max-width:650px){
+    .navbar a{
+        font-size: 1rem;
+    }
+    .pages{
+        width: 30%;
+    }
+    .pages a{
+        font-size: 1.1rem;
+    }
+    .searchcontainer{
+        justify-content: center;
+
+    }
+    .searchbuttons{
+        width: 80%;
+        
+    
+    }
+
+    .inputcontainer select{
+        width: 20%;
+        height: 70%;
+    }
+    .inputcontainer input{
+        width: 55%;
+        height: 70%;
+    }
+    .inputcontainer button{
+        width: 10%;
+        height: 70%;
+    }
+
+    .imagesdetails{
+        margin: 0;
+        width: 100%;
+
+    }
+    .cardsdetails{
+        width: 50%;
+        height: 70%;
+    }
+    .relase{
+        width: 60%;
+        height: 30%;
+       
+    
+    }
+    .title{
+        width: 80%;
+        height: 25%;
+        
+       
+    }
+    .title h2{
+      font-size: 1.3rem;
+        
+       
+    }
+    
+    
+    .castcontanier{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width:651px) and (max-width:1020px){
+    .navbar a{
+        font-size: 1rem;
+    }
+    .pages{
+        width: 30%;
+    }
+    .pages a{
+        font-size: 1.1rem;
+    }
+   
+    .searchbuttons{
+        width: 60%;
         
     
     }

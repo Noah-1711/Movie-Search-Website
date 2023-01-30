@@ -5,31 +5,26 @@ const series= document.getElementById("series")
 
 const cards= document.getElementById("cards")
 
+
 radioone()
 
  function hello(){
     selectvalue =selectinput.value
-    console.log("day",selectvalue)
-
     if(movies.checked == true && selectvalue =="day"){
  movies.addEventListener('change', moviesearch(selectvalue))
-        // console.log("day",selectvalue)
         
     }
     else if(movies.checked==true && selectvalue=="week"){
         movies.addEventListener('change', moviesearch(selectvalue))
 
-        // console.log("week",selectvalue)
     }
     else if(series.checked==true && selectvalue=="day"){
         series.addEventListener('rad', seriessearch(selectvalue))
 
-        // console.log("week",selectvalue)
     }
     else if(series.checked==true && selectvalue=="week"){
         series.addEventListener('change', seriessearch(selectvalue))
 
-        // console.log("week",selectvalue)
     }
 
  }
@@ -46,10 +41,7 @@ radioone()
 // async function fetchmoviegenre()
 // {
 
-//     const res=await fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=3fd2be6f0c70a2a598f084ddfb75487c")
-//     console.log(res)
-//     const data=await res.json()
-//     console.log(data)
+    
 //     data.genres.map((ele)=>
 //     {
         
@@ -79,18 +71,33 @@ radioone()
     
 // }
 
+// const mgenre=[]
 
  async function moviesearch(selectvalue){
-    console.log("day")
     cards.innerHTML=""
+
+
+    
+    // const moviegenre=await fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=3fd2be6f0c70a2a598f084ddfb75487c")
+    // console.log(moviegenre)
+    // const genredata=await moviegenre.json()
+    // console.log(genredata.genres)
+    // genredata.genres.map((genre)=>{
+    //    console.log(genre)
+    //    mgenre[genre.id]=genre.name
+       
+    // })
+    
+    // console.log(mgenre)
+
+
+
      const res=  await fetch(`https://api.themoviedb.org/3/trending/movie/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c`)
-     console.log(res)
      const data = await res.json()
-     console.log(data)
      console.log(data.results);
    
-     
      data.results.map((ele)=>{
+       
         cards.innerHTML +=` 
         <a onclick="moviedeatils(${ele.id})" href="./cards.html">
         <div class="poster">
@@ -98,7 +105,7 @@ radioone()
 
         <div class="imgcontent">
         <h3>${ele.title}</h3>
-        <small>Drama | action</small>
+        <small id="moviegenre">Drama | Entertainment</small>
         <p>${ele.release_date.slice(0,4) }</p>
 
 
@@ -110,21 +117,29 @@ radioone()
         
     </div>
     </a>`
+
+
+//     ele.genre_ids.map((element)=>
+//   {
+//     console.log(element)
+//     console.log(mgenre[element])
+//     small.innerHTML += `${mgenre[element]} | `
+//   })
     
 
        
 
      })
-    
+
+  
+
      
 }
 
 
 async function seriessearch(selectvalue){
     cards.innerHTML=""
-     console.log("hello")
      const response =await fetch(`https://api.themoviedb.org/3/trending/tv/${selectvalue}?api_key=3fd2be6f0c70a2a598f084ddfb75487c`)
-     console.log(response)
      const data= await response.json()
      console.log(data)
      console.log(data.results);
@@ -160,14 +175,12 @@ async function seriessearch(selectvalue){
 }
 
 function moviedeatils(id){
-    console.log("moviesdeatils")
     localStorage.setItem('movieid',id)
 
    
 }
 
 function seriesdetails(id){
- console.log("series details")
  localStorage.setItem('seriesid',id)
 
 }
