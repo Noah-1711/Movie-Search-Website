@@ -1,18 +1,19 @@
-*{
- margin: 0px;
- padding: 0px;
- box-sizing: border-box;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 
 }
 
-body{
+body {
     width: 100vw;
-    background-image: linear-gradient(90deg,#1e1e32,#38496e 75%);
+    background-image: linear-gradient(90deg, #1e1e32, #38496e 75%);
     color: white;
     overflow-x: hidden;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.maincontainer{
+
+.maincontainer {
     width: 100%;
     height: 100%;
     display: flex;
@@ -22,7 +23,7 @@ body{
 
 }
 
-.navbar{
+.navbar {
     width: 98%;
     height: 10vh;
     display: flex;
@@ -30,30 +31,33 @@ body{
     align-items: center;
 
 }
-.navbar a{
+
+.navbar a {
     font-size: 1rem;
     text-decoration: none;
     color: white;
 }
 
-.pages{
-    width:15%;
+.pages {
+    width: 15%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-.pages a{
+
+.pages a {
     text-decoration: none;
     font-size: 1rem;
     color: rgb(146, 151, 175);
     font-weight: 600;
 }
-.pages a:hover{
+
+.pages a:hover {
     color: white;
 }
 
-.searchcontainer{
+.searchcontainer {
     width: 90%;
     height: 25vh;
     display: flex;
@@ -61,7 +65,7 @@ body{
     justify-content: flex-end;
 }
 
-.inputcontainer{
+.inputcontainer {
     width: 90%;
     height: 30vh;
     display: flex;
@@ -71,7 +75,8 @@ body{
 
 
 }
-.searchinput{
+
+.searchinput {
     margin-top: 2rem;
     width: 100%;
     height: 30%;
@@ -81,37 +86,43 @@ body{
 
 
 }
-.inputcontainer select{
+
+.inputcontainer select {
     width: 8%;
     height: 75%;
     font-size: 1.1rem;
     outline: none;
 }
-.inputcontainer input{
+
+.inputcontainer input {
     width: 50%;
     height: 75%;
     font-size: 1.1rem;
     outline: none;
 
 }
-.inputcontainer button{
+
+.inputcontainer button {
     width: 4%;
     height: 75%;
 }
-.searchbuttons{
-width: 35%;
-height: 30%;
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin: 1rem;
+
+.searchbuttons {
+    width: 35%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
 
 
 }
-.searchbuttons label{
+
+.searchbuttons label {
     font-size: 1.2rem;
 }
-.searchbuttons select{
+
+.searchbuttons select {
     width: 30%;
     height: 75%;
     font-size: 1.1rem;
@@ -141,6 +152,7 @@ input[type="radio"] {
     appearance: none;
     display: none;
 }
+
 .buttons label {
     font-size: 1rem;
     display: flex;
@@ -155,22 +167,23 @@ input[type="radio"] {
     color: white;
 }
 
-input[type="radio"]:checked + label {
+input[type="radio"]:checked+label {
     background-color: white;
     color: black;
     transition: 0.3s;
 }
+
 /* button{
     width: 50%;
     height: 100%;
 } */
 
-hr{
+hr {
     width: 100%;
-    border: 1px solid rgba(234,237,255,.08);
+    border: 1px solid rgba(234, 237, 255, .08);
 }
 
-.result{
+.result {
     width: 100%;
     height: 100%;
     display: flex;
@@ -180,7 +193,7 @@ hr{
 
 }
 
-.cards{
+.cards {
     width: 85%;
     height: 100%;
     display: flex;
@@ -188,11 +201,13 @@ hr{
     align-items: center;
     flex-wrap: wrap;
 }
-.cards a{
+
+.cards a {
     text-decoration: none;
     color: white;
 }
-.poster{
+
+.poster {
     width: 160px;
     height: 320px;
     margin: 1.5rem;
@@ -201,20 +216,22 @@ hr{
 
 
 }
-.poster:hover{
+
+.poster:hover {
     transform: scale(1.1);
 
 }
-.poster img{
+
+.poster img {
     width: 100%;
     height: 70%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    
+
 
 
 }
 
-.imgcontent{
+.imgcontent {
     width: 100%;
     height: 30%;
     display: flex;
@@ -222,36 +239,39 @@ hr{
     justify-content: flex-start;
 
 }
-.imgcontent h3{
+
+.imgcontent h3 {
     font-size: 15px;
 }
-.imgcontent small{
+
+.imgcontent small {
     font-size: 10px;
     color: rgb(146, 151, 175)
 }
-.imgcontent p{
+
+.imgcontent p {
     font-size: 13px;
     color: rgb(146, 151, 175)
 }
 
-.votes{
- width: 50px;
- height: 50px;
- border: 3px green solid;
- position: absolute;
- top:-15px;
- right: -15px;
- border-radius: 50%;
- background-color: rgba(0,0,0, 0.8); 
- display: flex;
- justify-content: center;
- align-items: center;
- font-size: 12px;
+.votes {
+    width: 50px;
+    height: 50px;
+    border: 3px green solid;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
 
 }
 
 
-.imagecontainer{
+.imagecontainer {
     width: 100%;
     height: 90vh;
     display: flex;
@@ -260,18 +280,18 @@ hr{
     background-size: 100% 100%;
 
 
-   
+
 
 }
 
-.imagesdetails{
+.imagesdetails {
     width: 50%;
     height: 50%;
     margin-left: 2rem;
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 1rem;
-    background-color: rgba(0,0,0, 0.4); 
+    background-color: rgba(0, 0, 0, 0.4);
 
 
 
@@ -280,15 +300,15 @@ hr{
 
 }
 
-.imagesdetails img{
+.imagesdetails img {
     width: 200px;
     height: 250px;
 
 
 }
 
-.cardsdetails{
-    width:60%;
+.cardsdetails {
+    width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -296,18 +316,19 @@ hr{
 
 
 }
-.percent{
+
+.percent {
     width: 50px;
     height: 50px;
     border: 3px green solid;
     border-radius: 50%;
-    background-color: rgba(0,0,0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.relase{
+.relase {
     width: 40%;
     height: 30%;
     display: flex;
@@ -315,7 +336,8 @@ hr{
     justify-content: space-between;
 
 }
-.title{
+
+.title {
     width: 70%;
     height: 25%;
     display: flex;
@@ -325,14 +347,15 @@ hr{
 }
 
 
-.castcontanier{
+.castcontanier {
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.plot{
+
+.plot {
     width: 55%;
     height: 60%;
     display: flex;
@@ -340,11 +363,13 @@ hr{
     justify-content: flex-start;
 
 }
-.plot hr{
-    margin-top: 1rem ;
-    margin-bottom: 1rem ;
+
+.plot hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-.cast{
+
+.cast {
     width: 30%;
     height: 60%;
     display: flex;
@@ -352,86 +377,99 @@ hr{
     justify-content: flex-start;
 
 }
-.cast hr{
-    margin-top: 1rem ;
-    margin-bottom: 1rem ;
+
+.cast hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
-.castdetails{
+
+.castdetails {
     width: 50%;
     height: 16%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.castdetails img{
+
+.castdetails img {
     width: 50px;
-    height:50px;
- border-radius: 50%;
+    height: 50px;
+    border-radius: 50%;
 }
 
-@media only screen and (max-width:480px){
-    .navbar a{
+@media only screen and (max-width:480px) {
+    .navbar a {
         font-size: .9rem;
     }
-    .pages{
+
+    .pages {
         flex-direction: column;
         width: 30%;
     }
-    .pages a{
+
+    .pages a {
         font-size: 1rem;
     }
-    .searchcontainer{
+
+    .searchcontainer {
         justify-content: center;
 
     }
-    .searchbuttons{
+
+    .searchbuttons {
         width: 90%;
-        
-    
+
+
     }
 
-    .inputcontainer select{
+    .inputcontainer select {
         width: 20%;
         height: 70%;
     }
-    .inputcontainer input{
+
+    .inputcontainer input {
         width: 55%;
         height: 70%;
     }
-    .inputcontainer button{
+
+    .inputcontainer button {
         width: 10%;
         height: 70%;
     }
 
-    .imagesdetails{
+    .imagesdetails {
         margin: 0;
         width: 100%;
 
     }
-    .cardsdetails{
+
+    .cardsdetails {
         width: 50%;
         height: 70%;
     }
-    .relase{
+
+    .relase {
         width: 60%;
         height: 30%;
-       
-    
+
+
     }
-    .title{
+
+    .title {
         width: 80%;
         height: 25%;
-        
-       
+
+
     }
-    .title h2{
-      font-size: 1.3rem;
-        
-       
+
+    .title h2 {
+        font-size: 1.3rem;
+
+
     }
-    
-    
-    .castcontanier{
+
+
+    .castcontanier {
         width: 100%;
         height: 100vh;
         display: flex;
@@ -440,68 +478,78 @@ hr{
     }
 }
 
-@media only screen and (min-width:481px) and (max-width:650px){
-    .navbar a{
+@media only screen and (min-width:481px) and (max-width:650px) {
+    .navbar a {
         font-size: 1rem;
     }
-    .pages{
+
+    .pages {
         width: 30%;
     }
-    .pages a{
+
+    .pages a {
         font-size: 1.1rem;
     }
-    .searchcontainer{
+
+    .searchcontainer {
         justify-content: center;
 
     }
-    .searchbuttons{
+
+    .searchbuttons {
         width: 80%;
-        
-    
+
+
     }
 
-    .inputcontainer select{
+    .inputcontainer select {
         width: 20%;
         height: 70%;
     }
-    .inputcontainer input{
+
+    .inputcontainer input {
         width: 55%;
         height: 70%;
     }
-    .inputcontainer button{
+
+    .inputcontainer button {
         width: 10%;
         height: 70%;
     }
 
-    .imagesdetails{
+    .imagesdetails {
         margin: 0;
         width: 100%;
 
     }
-    .cardsdetails{
+
+    .cardsdetails {
         width: 50%;
         height: 70%;
     }
-    .relase{
+
+    .relase {
         width: 60%;
         height: 30%;
-       
-    
+
+
     }
-    .title{
+
+    .title {
         width: 80%;
         height: 25%;
-        
-       
+
+
     }
-    .title h2{
-      font-size: 1.3rem;
-        
-       
+
+    .title h2 {
+        font-size: 1.3rem;
+
+
     }
-    
-    
-    .castcontanier{
+
+
+    .castcontanier {
         width: 100%;
         height: 100vh;
         display: flex;
@@ -510,65 +558,73 @@ hr{
     }
 }
 
-@media only screen and (min-width:651px) and (max-width:1020px){
-    .navbar a{
+@media only screen and (min-width:651px) and (max-width:1020px) {
+    .navbar a {
         font-size: 1rem;
     }
-    .pages{
+
+    .pages {
         width: 30%;
     }
-    .pages a{
+
+    .pages a {
         font-size: 1.1rem;
     }
-   
-    .searchbuttons{
+
+    .searchbuttons {
         width: 60%;
-        
-    
+
+
     }
 
-    .inputcontainer select{
+    .inputcontainer select {
         width: 20%;
         height: 70%;
     }
-    .inputcontainer input{
+
+    .inputcontainer input {
         width: 55%;
         height: 70%;
     }
-    .inputcontainer button{
+
+    .inputcontainer button {
         width: 10%;
         height: 70%;
     }
 
-    .imagesdetails{
+    .imagesdetails {
         margin: 0;
         width: 100%;
 
     }
-    .cardsdetails{
+
+    .cardsdetails {
         width: 50%;
         height: 70%;
     }
-    .relase{
+
+    .relase {
         width: 60%;
         height: 30%;
-       
-    
+
+
     }
-    .title{
+
+    .title {
         width: 80%;
         height: 25%;
-        
-       
+
+
     }
-    .title h2{
-      font-size: 1.3rem;
-        
-       
+
+    .title h2 {
+        font-size: 1.3rem;
+
+
     }
-    
-    
-    .castcontanier{
+
+
+    .castcontanier {
         width: 100%;
         height: 100vh;
         display: flex;

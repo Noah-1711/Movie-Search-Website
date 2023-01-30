@@ -3,6 +3,8 @@ getmoviedetails()
 
 getseriesdetails()
 
+// deatils of movie 
+
 async function getmoviedetails() {
 
     let movieid = localStorage.getItem('movieid')
@@ -53,26 +55,26 @@ async function getmoviedetails() {
                 
 </div>`
 
-const cast= document.getElementById("cast")
-console.log(cast)
-const castres= await fetch(` https://api.themoviedb.org/3/movie/${movieid}/credits?api_key=3fd2be6f0c70a2a598f084ddfb75487c`) 
-console.log(castres)
-const castdata= await castres.json()
-console.log(castdata.cast)
-castdata.cast.map((castname,index)=>{
-    // console.log(castname)
-    // console.log(index)
-    // console.log(castname.name)
-    if(index<=3){
-        cast.innerHTML +=` <div class="castdetails">
+    const cast = document.getElementById("cast")
+    console.log(cast)
+    const castres = await fetch(` https://api.themoviedb.org/3/movie/${movieid}/credits?api_key=3fd2be6f0c70a2a598f084ddfb75487c`)
+    console.log(castres)
+    const castdata = await castres.json()
+    console.log(castdata.cast)
+    castdata.cast.map((castname, index) => {
+        // console.log(castname)
+        // console.log(index)
+        // console.log(castname.name)
+        if (index <= 3) {
+            cast.innerHTML += ` <div class="castdetails">
         <img src="	https://image.tmdb.org/t/p/w45${castname.profile_path}" >
         <p>${castname.name}</p> </div>`
-    }
-    
+        }
 
-    
 
-})
+
+
+    })
 
     localStorage.removeItem('movieid');
 
@@ -80,6 +82,7 @@ castdata.cast.map((castname,index)=>{
 }
 
 
+//  details of tv
 async function getseriesdetails() {
 
     let seriesid = localStorage.getItem('seriesid')
@@ -137,26 +140,26 @@ async function getseriesdetails() {
                 
 </div>`
 
-const cast= document.getElementById("cast")
-console.log(cast)
-const castres= await fetch(` https://api.themoviedb.org/3/tv/${seriesid}/credits?api_key=3fd2be6f0c70a2a598f084ddfb75487c`) 
-console.log(castres)
-const castdata= await castres.json()
-console.log(castdata.cast)
-castdata.cast.map((castname,index)=>{
-    // console.log(castname)
-    // console.log(index)
-    // console.log(castname.name)
-    if(index<=3){
-        cast.innerHTML +=` <div class="castdetails">
+    const cast = document.getElementById("cast")
+    console.log(cast)
+    const castres = await fetch(` https://api.themoviedb.org/3/tv/${seriesid}/credits?api_key=3fd2be6f0c70a2a598f084ddfb75487c`)
+    console.log(castres)
+    const castdata = await castres.json()
+    console.log(castdata.cast)
+    castdata.cast.map((castname, index) => {
+        // console.log(castname)
+        // console.log(index)
+        // console.log(castname.name)
+        if (index <= 3) {
+            cast.innerHTML += ` <div class="castdetails">
         <img src="	https://image.tmdb.org/t/p/w45${castname.profile_path}" >
         <p>${castname.name}</p> </div>`
-    }
-    
+        }
 
-    
 
-})
+
+
+    })
 
     localStorage.removeItem('seriesid');
 
