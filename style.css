@@ -314,7 +314,6 @@ hr {
 .cardsdetails {
     width: 60%;
     height: 100%;
-    border: 2px red solid;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
